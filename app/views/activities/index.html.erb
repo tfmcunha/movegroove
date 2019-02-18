@@ -1,7 +1,7 @@
 <div class="mt-5">
   <h1>ACTIVITIES</h1>
 
-  <table class="table table-bordered table-sm">
+  <table class="table table-bordered table-sm w-auto">
     <thead class="thead-light">
       <tr>    
         <th>Date</th>
@@ -13,7 +13,7 @@
 
     <tbody>
       <% current_user.activities.each do |activity| %>
-        <tr>
+        <tr class="teste">
           <td><%= activity.activitydate %></td>
           <td><%= activity.exercise.name %></td>
           <td><%= activity.duration.to_s + " min" %></td>
@@ -28,5 +28,6 @@
   <br>
 
   <%= link_to 'New Activity', new_activity_path, :class => 'btn btn-primary' %>
+
 </div>
 

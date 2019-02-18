@@ -1,6 +1,6 @@
 class ExercisesController < ApplicationController
   before_action :set_exercise, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :ensure_admin_user!
 
   # GET /exercises
   # GET /exercises.json
@@ -71,5 +71,11 @@ class ExercisesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def exercise_params
       params.require(:exercise).permit(:name)
+    end
+
+    def ensure_admin_user!
+      unless current_user and current_user.admin?
+        redirect_to root_path, alert: " Access denied!"
+      end
     end
 end

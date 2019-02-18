@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   
-  resources :quotes
   root 'home#index'
+  get 'pages/about'
+  get 'pages/contact'
+  resources :quotes
   resources :activities
   resources :exercises
   devise_for :users

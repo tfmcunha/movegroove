@@ -1,7 +1,5 @@
-$(document).on('turbolinks:load', function() {
-	$('.nav-link').click(function(){
-	  $('.container').animate({
-	  	opacity:0
-	  },5000);
-	});
+$(document).ready(function() {
+	$('.navbar-brand').addClass("hide-nbb");
+  	$('.navbar-brand').animate({
+    'left': '0'},1000);
 });

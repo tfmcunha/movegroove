@@ -10,7 +10,13 @@ body {
 
 .navbar-brand {
 	font-family: 'Faster One', cursive;
-	font-size: 45px
+	font-size: 45px;
+	
+}
+
+.hide-nbb {
+	position:relative;
+	left: -1000px;
 }
 
 label {
@@ -24,3 +30,4 @@ h1, h2, h3 {
 .display-4 {
 	font-family: 'Caveat', cursive;
 }
+
