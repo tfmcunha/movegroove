@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  exercise: one
+  activitydate: 2019-02-08
+  duration: 1
+
+two:
+  user: two
+  exercise: two
+  activitydate: 2019-02-08
+  duration: 1

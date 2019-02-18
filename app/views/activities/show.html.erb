@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center mt-5 modal-body">
+  	<div>
+		<p>
+		  <strong>Exercise:</strong>
+		  <%= @activity.exercise.name %>
+		</p>
+
+		<p>
+		  <strong>Date:</strong>
+		  <%= @activity.activitydate %>
+		</p>
+
+		<p>
+		  <strong>Duration:</strong>
+		  <%= @activity.duration.to_s + " min" %>
+		</p>
+
+		<%= link_to 'Edit', edit_activity_path(@activity) %> |
+		<%= link_to 'Back', activities_path %>
+	</div>
+</div>

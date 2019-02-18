@@ -1,0 +1,32 @@
+<div class="mt-5">
+  <h1>ACTIVITIES</h1>
+
+  <table class="table table-bordered table-sm">
+    <thead class="thead-light">
+      <tr>    
+        <th>Date</th>
+        <th>Exercise</th>
+        <th>Duration</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% current_user.activities.each do |activity| %>
+        <tr>
+          <td><%= activity.activitydate %></td>
+          <td><%= activity.exercise.name %></td>
+          <td><%= activity.duration.to_s + " min" %></td>
+          <td><%= link_to 'Show', activity, :class => 'btn btn-primary btn-sm' %></td>
+          <td><%= link_to 'Edit', edit_activity_path(activity), :class => 'btn btn-primary btn-sm' %></td>
+          <td><%= link_to 'X', activity, :class => 'btn btn-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Activity', new_activity_path, :class => 'btn btn-primary' %>
+</div>
+
