@@ -1,0 +1,41 @@
+<div class="mt-5">
+  <%= form_for @contact_form do |form| %>
+  <h1>SEND US A MESSAGE!</h1>
+
+      <% if @contact_form.errors.any? %>
+        <div class="alert alert-danger alert-dismissible fade show">
+          <ul>
+          <% @contact_form.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+       
+      
+      <div class="field form-group">
+        <%= form.label :name %>
+        <%= form.text_field :name, :class => "form-control" %>
+      </div>
+
+      <div class="field form-group">
+        <%= form.label :email %>
+        <%= form.email_field :email, :class => "form-control" %>
+      </div>
+
+      <div class="field form-group">
+        <%= form.label :message %>
+        <%= form.text_area :message, :class => "form-control" %>
+      </div>
+      <div class= "hidden">
+         <%= form.email_field :nickname, hint: 'leave this field empty' %>
+      </div>
+      
+      <div class="actions form-group">
+        <%= form.submit "Send", :class => "btn btn-primary" %>
+      </div>
+
+  <% end %>
+</div>
+
+  

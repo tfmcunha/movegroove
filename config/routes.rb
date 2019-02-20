@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
   root 'home#index'
-  get 'pages/about'
-  get 'pages/contact'
+  
+  resources :contact_forms
   resources :quotes
   resources :activities
   resources :exercises
