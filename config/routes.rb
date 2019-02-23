@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   get 'about/index'
   root 'home#index'
-  
+  get '/contact', to: 'contact_forms#new'
   resources :contact_forms
   resources :quotes
   resources :activities
