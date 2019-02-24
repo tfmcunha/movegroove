@@ -1,0 +1,10 @@
+[0;1;32m●[0m mysql.service - MySQL Community Server
+   Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+   Active: [0;1;32mactive (running)[0m since Sat 2019-02-23 23:39:37 WET; 1min 8s ago
+ Main PID: 4220 (mysqld)
+    Tasks: 29 (limit: 4915)
+   CGroup: /system.slice/mysql.service
+           └─4220 /usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.pid
+
+fev 23 23:39:36 tiago-HP-Compaq-Pro-6300-SFF systemd[1]: Starting MySQL Community Server...
+fev 23 23:39:37 tiago-HP-Compaq-Pro-6300-SFF systemd[1]: Started MySQL Community Server.
