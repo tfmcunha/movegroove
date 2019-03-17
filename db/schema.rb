@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_02_15_134833) do
 
-  create_table "activities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "activities", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "exercise_id"
     t.date "activitydate"
@@ -23,20 +23,20 @@ ActiveRecord::Schema.define(version: 2019_02_15_134833) do
     t.index ["user_id"], name: "index_activities_on_user_id"
   end
 
-  create_table "exercises", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "exercises", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "quotes", force: :cascade do |t|
     t.text "body"
     t.string "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
