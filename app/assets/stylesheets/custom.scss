@@ -10,7 +10,7 @@ body {
 
 .navbar-brand {
 	font-family: 'Faster One', cursive;
-	font-size: 45px;
+	font-size: 5vw;
 	
 }
 
@@ -31,13 +31,12 @@ h1, h2, h3 {
 	background-color: rgba(29,79,137,0.2);
 }
 
-.runImage {
-	position: absolute;
-	
-	height: 40vw;
-	z-index: -1;
+.runImage {	
+	position: fixed;
 	bottom: 0;
 	right: 0;
+	width: 40vw;
+	z-index: -10;	
 	filter: opacity(0.2);
 }
 
