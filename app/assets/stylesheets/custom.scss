@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Faster+One|Caveat');
 
 body {
-	margin-bottom: 50px;
+	margin-bottom: 55px;
 }
 
 .container {
@@ -33,9 +33,9 @@ h1, h2, h3 {
 
 .runImage {	
 	position: fixed;
-	bottom: 0;
+	bottom: 55px;
 	right: 0;
-	width: 40vw;
+	height: 40vh;
 	z-index: -10;	
 	filter: opacity(0.2);
 }
@@ -48,14 +48,10 @@ h1, h2, h3 {
 display: none
 }
 
-.nav-link {
-	font-weight: bold;
-}
-
-.myform {
+.boxWrap {
 	background-color: white;
 	box-shadow: inset 0px 0px 15px 5px rgba(29,79,137,0.2);
-	padding: 20px;
+	
 }
 
 .hvr-underline-from-center {
@@ -86,4 +82,12 @@ display: none
 
 .navbar {
 	background-color: rgb(29,79,137);
+}
+
+.nav-link {
+	font-weight: bold;
+}
+
+.dropdown-menu {
+	background-color: rgb(122, 150, 181);
 }
