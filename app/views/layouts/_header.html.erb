@@ -1,44 +1,48 @@
-<nav class="navbar navbar-expand-md navbar-dark">
-  <%= link_to 'MOVE & GROOVE', root_path, :class => 'navbar-brand'%>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
+<div class="row">
+  <div class="col">  
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <%= link_to 'MOVE & GROOVE', root_path, :class => 'navbar-brand'%>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
 
-          <%= render "layouts/navbar" %>
-                
-          <% if current_user %>
+              <%= render "layouts/navbar" %>
+                    
+              <% if current_user %>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= "Hello #{current_user.first_name}" %>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <% if current_user.admin %>
-              <%= link_to 'Exercises', exercises_path, :class => 'dropdown-item' %>
-              <div class="dropdown-divider"></div>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <%= "Hello #{current_user.first_name}" %>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <% if current_user.admin %>
+                  <%= link_to 'Exercises', exercises_path, :class => 'dropdown-item' %>
+                  <div class="dropdown-divider"></div>
+                  <% end %>
+                  <%= link_to 'My activities', activities_path, :class => 'dropdown-item' %>
+                  <div class="dropdown-divider"></div>
+                  <%= link_to 'Edit Profile', edit_user_registration_path, :class => 'dropdown-item' %>
+                  <%= link_to 'Logout', destroy_user_session_path, :class => 'dropdown-item', method: :delete %>
+                            
+                </div>
+              </li>
+
+              <% else %>
+
+              <li class="nav-item">
+                <%= link_to 'Signup', new_user_registration_path, :class => 'nav-link hvr-underline-from-center'%>
+              </li>
+
+              <li class="nav-item">
+                <%= link_to 'Login', new_user_session_path, :class => 'nav-link hvr-underline-from-center'%>
+              </li>
+
               <% end %>
-              <%= link_to 'My activities', activities_path, :class => 'dropdown-item' %>
-              <div class="dropdown-divider"></div>
-              <%= link_to 'Edit Profile', edit_user_registration_path, :class => 'dropdown-item' %>
-              <%= link_to 'Logout', destroy_user_session_path, :class => 'dropdown-item', method: :delete %>
-                        
-            </div>
-          </li>
-
-          <% else %>
-
-          <li class="nav-item">
-            <%= link_to 'Signup', new_user_registration_path, :class => 'nav-link hvr-underline-from-center'%>
-          </li>
-
-          <li class="nav-item">
-            <%= link_to 'Login', new_user_session_path, :class => 'nav-link hvr-underline-from-center'%>
-          </li>
-
-          <% end %>
-        </ul>
-      </div>
+            </ul>
+        </div>
     </nav>
+  </div>
+</div>
